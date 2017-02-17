@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Admin Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<SonOfCod.Models.ApplicationUser>
+
+<div class="col-sm-6">
+    <h2>Current Subscribers:</h2>
+
+    <ul>
+        @foreach (var sub in ViewBag.Subscribers)
+        {
+            <li>@sub.Email - Age: @sub.Age</li>
+        }
+
+    </ul>
+</div>
+<div class="col-sm-6">
+    <h2>Current Admins:</h2>
+
+    <ul>
+        @foreach (var user in Model)
+        {
+            <li>@user.UserName - </li>
+        }
+
+    </ul>
+</div>
