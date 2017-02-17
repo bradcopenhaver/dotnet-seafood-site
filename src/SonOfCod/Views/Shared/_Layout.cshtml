@@ -9,8 +9,25 @@
     <link rel="stylesheet" type="text/css" href="~/css/styles.css">
 </head>
 <body>
+    <div class="container-fluid">
+        <nav class="navbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active">@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("Products", "Index", "Home")</li>
+                <li>@Html.ActionLink("Our History", "Index", "Home")</li>
+                <li>@Html.ActionLink("About Us", "Index", "Home")</li>
+            </ul>
+        </nav>        
+    </div>
     <div class="container">
         @RenderBody()
     </div>
+    <nav class="navbar navbar-fixed-bottom">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav navbar-right">
+                <li >@Html.ActionLink("Admin Portal", "Index", "Account")</li>
+            </ul>
+        </div>
+    </nav>
 </body>
 </html>
