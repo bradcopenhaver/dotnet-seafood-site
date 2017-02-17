@@ -25,52 +25,6 @@ namespace SonOfCod.Controllers
         {
             return View();
         }
-        //GET: /Home/Subscribe/
-        public IActionResult Subscribe()
-        {
-            return View();
-        }
-        //POST: /Home/Subscribe/
-        [HttpPost]
-        public IActionResult Subscribe(Subscriber subscriber)
-        {
-            _db.Subscribers.Add(subscriber);
-            _db.SaveChanges();
-            return RedirectToAction("SubSuccess" , new { id = subscriber.SubscriberId });
-        }
-        //GET: /Home/Unsubscribe/
-        public IActionResult Unsubscribe()
-        {
-            return View();
-        }
-        //POST: /Home/Unsubscribe/
-        [HttpPost]
-        public IActionResult Unsubscribe(Subscriber subscriber)
-        {
-            Subscriber currentSub = _db.Subscribers.FirstOrDefault(s=> s.Email == subscriber.Email);
-            if (currentSub != null)
-            {
-                _db.Remove(currentSub);
-                _db.SaveChanges();
-                return RedirectToAction("UnsubSuccess");
-            }
-            else
-            {
-                return View();
-            }
-        }
-
-        //GET: /Home/SubSuccess/
-        public IActionResult SubSuccess(int id)
-        {
-            ViewBag.Subscriber = _db.Subscribers.FirstOrDefault(s => s.SubscriberId == id);
-            return View();
-        }
-
-        //GET: /Home/UnsubSuccess/
-        public IActionResult UnsubSuccess()
-        {
-            return View();
-        }
+        
     }
 }

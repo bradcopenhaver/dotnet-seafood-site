@@ -22,6 +22,7 @@ namespace SonOfCod.Controllers
             _signInManager = signInManager;
             _db = db;
         }
+        //public AccountController() { }
         public IActionResult Login()
         {
             return View();
