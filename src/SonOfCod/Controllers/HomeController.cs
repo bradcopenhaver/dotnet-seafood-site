@@ -31,6 +31,7 @@ namespace SonOfCod.Controllers
             return View();
         }
         //POST: /Home/Subscribe/
+        [HttpPost]
         public IActionResult Subscribe(Subscriber subscriber)
         {
             _db.Subscribers.Add(subscriber);
@@ -43,6 +44,7 @@ namespace SonOfCod.Controllers
             return View();
         }
         //POST: /Home/Unsubscribe/
+        [HttpPost]
         public IActionResult Unsubscribe(Subscriber subscriber)
         {
             Subscriber currentSub = _db.Subscribers.FirstOrDefault(s=> s.Email == subscriber.Email);

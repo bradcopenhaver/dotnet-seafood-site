@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace SonOfCod.Migrations
 {
@@ -12,7 +13,8 @@ namespace SonOfCod.Migrations
                 name: "Subscribers",
                 columns: table => new
                 {
-                    SubscriberId = table.Column<int>(nullable:false),
+                    SubscriberId = table.Column<int>(nullable:false)
+                    .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Email = table.Column<string>(nullable: false),
                     Age = table.Column<int>(nullable: true)
                 },
