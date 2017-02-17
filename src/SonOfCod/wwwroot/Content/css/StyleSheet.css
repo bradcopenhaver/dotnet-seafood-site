@@ -1,0 +1,27 @@
+﻿.heading-logo {
+    text-align: center;
+}
+.banner {
+    height: 300px;
+    overflow: hidden;
+}
+.bannerimg {
+    height: 339px;
+    display:block;
+    margin: 0 auto;
+}
+.navbar-header {
+    text-align: center;
+}
+.call-to-action h2 {
+    text-align:center;
+}
+.call-to-action h3 {
+    text-align:center;
+}
+.call-to-action h6 {
+    text-align: center;
+}
+.placeholder {
+    border: 2px solid black;
+}

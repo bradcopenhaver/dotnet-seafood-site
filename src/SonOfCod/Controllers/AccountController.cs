@@ -69,11 +69,10 @@ namespace SonOfCod.Controllers
         }
 
         [Authorize]
-        [HttpPost]
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Home");
         }
     }
 }

@@ -2,6 +2,19 @@
     ViewData["Title"] = "Son of Cod Seafood";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@Html.ActionLink("Admin Portal", "Index", "Account")
+<div class="row">
+    <div class="banner">
+        <img class="bannerimg" src="~/Content/Images/HomeBanner.jpg" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-8">
 
-<img src="http://www.dovesandserpents.org/wp/wp-content/uploads/2011/02/Creation_of_Adam_Michelangelo_cropped.jpg" />
+    </div>
+    <div class="col-sm-4 call-to-action">
+        <h2>Word of Cod Newsletter</h2>
+        <p>Son of Cod periodically sends out a newsletter to our fans and customers. The Word of Cod spreads the good news about our latest events and deals!</p>
+        <h3>@Html.ActionLink("Sign up here!", "Subscribe", "Newsletter")</h3>
+        <h6>Or @Html.ActionLink("unsubscribe.", "Unsubscribe", "Newsletter")</h6>
+    </div>
+</div>
