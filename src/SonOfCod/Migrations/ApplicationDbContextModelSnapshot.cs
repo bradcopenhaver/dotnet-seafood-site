@@ -174,11 +174,15 @@ namespace SonOfCod.Migrations
 
             modelBuilder.Entity("SonOfCod.Models.Subscriber", b =>
                 {
-                    b.Property<string>("Email");
+                    b.Property<int>("SubscriberId")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<int>("Age");
 
-                    b.HasKey("Email");
+                    b.Property<string>("Email")
+                        .IsRequired();
+
+                    b.HasKey("SubscriberId");
 
                     b.ToTable("Subscribers");
                 });

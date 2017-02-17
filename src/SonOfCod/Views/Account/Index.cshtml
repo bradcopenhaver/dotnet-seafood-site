@@ -5,25 +5,28 @@
 
 @model IEnumerable<SonOfCod.Models.ApplicationUser>
 
-<div class="col-sm-6">
-    <h2>Current Subscribers:</h2>
+<div class="row">
+    <h2>Admin Menu</h2>
+    <div class="col-sm-6">
+        <h2>Current Subscribers:</h2>
 
-    <ul>
-        @foreach (var sub in ViewBag.Subscribers)
-        {
-            <li>@sub.Email - Age: @sub.Age</li>
-        }
+        <ul>
+            @foreach (var sub in ViewBag.Subscribers)
+            {
+                <li>@sub.Email - Age: @sub.Age</li>
+            }
 
-    </ul>
-</div>
-<div class="col-sm-6">
-    <h2>Current Admins:</h2>
+        </ul>
+    </div>
+    <div class="col-sm-6">
+        <h2>Current Admins:</h2>
 
-    <ul>
-        @foreach (var user in Model)
-        {
-            <li>@user.UserName - </li>
-        }
+        <ul>
+            @foreach (var user in Model)
+            {
+                <li>@user.UserName - </li>
+            }
 
-    </ul>
+        </ul>
+    </div>
 </div>

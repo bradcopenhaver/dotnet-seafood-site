@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SonOfCod.Migrations
 {
-    public partial class AddSubscriberTable : Migration
+    public partial class AddSubscribersTable : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,12 +12,13 @@ namespace SonOfCod.Migrations
                 name: "Subscribers",
                 columns: table => new
                 {
+                    SubscriberId = table.Column<int>(nullable:false),
                     Email = table.Column<string>(nullable: false),
-                    Age = table.Column<int>(nullable: false)
+                    Age = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Subscribers", x => x.Email);
+                    table.PrimaryKey("PK_Subscribers", x => x.SubscriberId);
                 });
         }
 

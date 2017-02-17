@@ -11,6 +11,8 @@ namespace SonOfCod.Models
     public class Subscriber
     {
         [Key]
+        public int SubscriberId { get; set; }
+        [Required]
         public string Email { get; set; }
         public int Age { get; set; }
     }

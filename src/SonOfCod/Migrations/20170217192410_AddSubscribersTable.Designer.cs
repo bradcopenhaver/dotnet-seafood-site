@@ -8,8 +8,8 @@ using SonOfCod.Models;
 namespace SonOfCod.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20170217172036_AddSubscriberTable")]
-    partial class AddSubscriberTable
+    [Migration("20170217192410_AddSubscribersTable")]
+    partial class AddSubscribersTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -175,11 +175,15 @@ namespace SonOfCod.Migrations
 
             modelBuilder.Entity("SonOfCod.Models.Subscriber", b =>
                 {
-                    b.Property<string>("Email");
+                    b.Property<int>("SubscriberId")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<int>("Age");
 
-                    b.HasKey("Email");
+                    b.Property<string>("Email")
+                        .IsRequired();
+
+                    b.HasKey("SubscriberId");
 
                     b.ToTable("Subscribers");
                 });
