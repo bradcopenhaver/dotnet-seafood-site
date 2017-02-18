@@ -17,7 +17,7 @@ You will need the following things properly installed on your computer.
 
 #### Installation
 
-Clone this repository and open the solution file `SonOfCod.sln` in Visual Studio. Open SSMS and connect to `(localdb)mssqllocaldb`, and run the script in the `SonOfCodDB.sql` file to create the local database. You can log in to the admin portal with email `admin@admin` and password `123qweA!`.
+Clone this repository and open the solution file `SonOfCod.sln` in Visual Studio. Open SSMS and connect to `(localdb)mssqllocaldb`, and run the script in the `SonOfCodDB.sql` file to create the local database. You can log in to the admin portal with email `admin@admin` and password `123qweA!`. You can also build the database by migration, but there will be no default admin account to log into. To migrate the database, right click on `SonOfCod` in the `src` folder and select `Build`. When the build is complete, navigate to the same folder in a command terminal and run `dotnet ef database update` to create the database on your local SQL server. You'll have to remove the `[Authorize]` tags that appear in `AccountController.cs` in order to access the admin portal.
 
 ## Known Bugs
 
