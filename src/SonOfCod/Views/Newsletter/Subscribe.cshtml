@@ -4,22 +4,36 @@
 }
 @model SonOfCod.Models.Subscriber
 
-<form asp-controller="Home" asp-action="Subscribe" method="post">
-
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-    <div class="form-group">
-        <label asp-for="Email"></label>
-        <input class="form-control" asp-for="Email" value="" />
-        <span asp-validation-for="Email" class="text-danger"></span>
+<div class="row">
+    <div class="banner">
+        <img class="bannerimg" src="~/Content/Images/HomeBanner.jpg" />
     </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <h3>Subscribe to the Word of Cod</h3>
+        <form asp-controller="Home" asp-action="Subscribe" method="post">
 
-    <h4>Tell us about yourself. (Optional)</h4>
-    <div class="form-group">
-        <label asp-for="Age"></label>
-        <input class="form-control" asp-for="Age" value="" type="number" />
-        <span asp-validation-for="Age" class="text-danger"></span>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input class="form-control" asp-for="Email" value="" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <hr />
+            <h4>Tell us about yourself. (Optional)</h4>
+            <div class="form-group">
+                <label asp-for="Age"></label>
+                <input class="form-control" asp-for="Age" value="" type="number" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+
+            <input class="btn" type="submit" value="Subscribe" />
+        </form>
     </div>
-
-    <input class="btn" type="submit" value="Subscribe" />
-</form>
+    <div class="col-sm-6">
+        <img src="~/Content/Images/Place500x250.jpg" class="placeholder" />
+        <p>There can be interesting text beneath that image. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+    </div>
+</div>
